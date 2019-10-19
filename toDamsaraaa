@@ -1,0 +1,74 @@
+def splita(word): 
+    return [char for char in word]  
+
+inputCount = int(input())
+
+for x in range(inputCount):
+
+    Aflag = False
+    Bflag = False
+    Cflag = False
+    Dflag = False
+    flag = 'F'  
+    count = 0
+    ACount = 0
+    BCount = 0
+    CCount = 0
+    DCount = 0
+
+    inputS = raw_input()
+        
+    inputArray = splita(inputS)
+    # print(inputArray)
+   
+    # if inputArray[0] == inputArray[-1]:
+    #     count -= 1
+    
+    #while inputArray[0] == inputArray[-1]:
+    #    inputArray.pop(-1)
+
+    for Y in inputArray:
+        if Y == 'A':
+            if flag == 'A':
+                pass
+            else:
+                if Aflag == True:
+                    count += 1
+                    flag = 'F'
+                else:
+                    Aflag = True
+                    flag = 'A'
+
+        elif Y == 'B':
+            if flag == 'B':
+                pass
+            else:
+                if Bflag == True:
+                    count += 1
+                    flag = 'F'
+                else:
+                    Bflag = True
+                    flag = 'B'
+
+        elif Y == 'C':
+            if flag == 'C':
+                pass
+            else:
+                if Cflag == True:
+                    count += 1
+                    flag = 'F'
+                else:
+                    Cflag = True
+                    flag = 'C'
+        elif Y == 'D':
+            if flag == 'D':
+                pass
+            else:
+                if Dflag == True:
+                    count += 1
+                    flag = 'F'
+                else:
+                    Dflag = True  
+                    flag = 'D'
+    print (count)  
+        
