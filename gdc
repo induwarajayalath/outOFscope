@@ -1,0 +1,25 @@
+import math 
+x, y = input().split()
+inputText = input()
+inputArray = inputText.split(" ")
+array_length = len(inputArray)
+
+gcdArray = []
+count = 0
+
+for X in range(0,array_length):
+    for Y in range(0,array_length):
+        tempX = int(inputArray[X])
+        tempY = int(inputArray[Y])
+        gcdArray.append(math.gcd(tempX,tempY))
+
+unique_list = [] 
+      
+for x in gcdArray: 
+    if x not in unique_list: 
+        unique_list.append(x) 
+
+for x in unique_list: 
+    count += 1
+
+print (count)
